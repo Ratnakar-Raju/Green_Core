@@ -1,4 +1,4 @@
-# Potato Disease Classification
+# Plant Disease Classification
 
 ## Setup for Python:
 
@@ -38,11 +38,6 @@ npm audit fix
 ```bash
 cd mobile-app
 yarn install
-```
-
-  - 2.1 Only for mac users
-```bash
-cd ios && pod install && cd ../
 ```
 
 3. Copy `.env.example` as `.env`.
@@ -183,8 +178,6 @@ gcloud functions deploy predict_lite --runtime python38 --trigger-http --memory 
 8. Your model is now deployed.
 9. Use Postman to test the GCF using the [Trigger URL](https://cloud.google.com/functions/docs/calling/http).
 
-Inspiration: https://cloud.google.com/blog/products/ai-machine-learning/how-to-serve-deep-learning-models-using-tensorflow-2-0-with-cloud-functions
-
 ## Deploying the TF Model (.h5) on GCP
 
 1. Create a [GCP account](https://console.cloud.google.com/freetrial/signup/tos?_ga=2.25841725.1677013893.1627213171-706917375.1627193643&_gac=1.124122488.1627227734.Cj0KCQjwl_SHBhCQARIsAFIFRVVUZFV7wUg-DVxSlsnlIwSGWxib-owC-s9k6rjWVaF4y7kp1aUv5eQaAj2kEALw_wcB).
@@ -207,6 +200,3 @@ gcloud functions deploy predict --runtime python38 --trigger-http --memory 512 -
 
 8. Your model is now deployed.
 9. Use Postman to test the GCF using the [Trigger URL](https://cloud.google.com/functions/docs/calling/http).
-
-Inspiration: https://cloud.google.com/blog/products/ai-machine-learning/how-to-serve-deep-learning-models-using-tensorflow-2-0-with-cloud-functions
-
